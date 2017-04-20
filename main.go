@@ -3,17 +3,38 @@ package main
 import (
 	"fmt"
 	"log"
-	"net/url"
-
+	"net/url"	
+	"os"
+	"encoding/json"
 	"github.com/ChimeraCoder/anaconda"
 )
 
-func main() {
-	consumerKey := ""
-	consumerSecret := ""
+type Config struct {
+	Twitter struct {
+		Key string `json:"key"`
+		Secret string `json:"secret"`
+	} `json:"twitter"`
+}
 
-	anaconda.SetConsumerKey(consumerKey)
-	anaconda.SetConsumerSecret(consumerSecret)
+
+func loadConf(file string) Config {
+	var config Config
+	configFile, err := os.Open(file)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	jsonParser := json.NewDecoder(configFile)
+	jsonParser.Decode(&config)
+	configFile.Close()
+	return config
+}
+
+
+func main() {
+  conf := loadConf("config.json")
+		
+	anaconda.SetConsumerKey(conf.Twitter.Key)
+	anaconda.SetConsumerSecret(conf.Twitter.Secret)
 
 	api := anaconda.NewTwitterApi("", "")
 
