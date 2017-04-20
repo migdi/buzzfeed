@@ -1,0 +1,40 @@
+hash: ec5ae9a2058b02117f4b681a8ef3ea6d25e3303b8bf432e4cf3e038c83c80197
+updated: 2017-04-20T17:52:23.639085833+01:00
+imports:
+- name: github.com/cenkalti/backoff
+  version: 5d150e7eec023ce7a124856b37c68e54b4050ac7
+- name: github.com/ChimeraCoder/anaconda
+  version: 51200854e890da0fcefd1e26524b8ddd175ae850
+- name: github.com/dghubble/go-twitter
+  version: 08b242f2f25e3108b9dec5a361d1021990018e7c
+  subpackages:
+  - twitter
+- name: github.com/dghubble/sling
+  version: eb56e89ac5088bebb12eef3cb4b293300f43608b
+- name: github.com/golang/protobuf
+  version: 2bba0603135d7d7f5cb73b2125beeda19c09f4ef
+  subpackages:
+  - proto
+- name: github.com/google/go-querystring
+  version: 53e6ce116135b80d037921a7fdd5138cf32d7a8a
+  subpackages:
+  - query
+- name: golang.org/x/net
+  version: 5602c733f70afc6dcec6766be0d5034d4c4f14de
+  subpackages:
+  - context
+- name: golang.org/x/oauth2
+  version: a6bd8cefa1811bd24b86f8902872e4e8225f74c4
+  subpackages:
+  - internal
+- name: google.golang.org/appengine
+  version: 170382fa85b10b94728989dfcf6cc818b335c952
+  subpackages:
+  - internal
+  - internal/base
+  - internal/datastore
+  - internal/log
+  - internal/remote_api
+  - internal/urlfetch
+  - urlfetch
+testImports: []

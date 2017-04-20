@@ -1,0 +1,3 @@
+package: github.com/kirederik/buzzapi
+import:
+- package: github.com/ChimeraCoder/anaconda
